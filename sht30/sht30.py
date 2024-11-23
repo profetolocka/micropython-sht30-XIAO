@@ -5,8 +5,8 @@ __version__ = '0.2.3'
 __author__ = 'Roberto Sánchez'
 __license__ = "Apache License 2.0. https://www.apache.org/licenses/LICENSE-2.0"
 
-# I2C address B 0x45 ADDR (pin 2) connected to VDD
-DEFAULT_I2C_ADDRESS = 0x45
+# I2C address for XIAO is 0x44
+DEFAULT_I2C_ADDRESS = 0x44
 
 
 class SHT30:
@@ -37,13 +37,13 @@ class SHT30:
     ENABLE_HEATER_CMD = b'\x30\x6D'
     DISABLE_HEATER_CMD = b'\x30\x66'
 
-    def __init__(self, scl_pin=5, sda_pin=4, delta_temp=0, delta_hum=0, i2c_address=DEFAULT_I2C_ADDRESS):
+    def __init__(self, scl_pin=7, sda_pin=6, delta_temp=0, delta_hum=0, i2c_address=DEFAULT_I2C_ADDRESS):
         self.i2c = I2C(scl=Pin(scl_pin), sda=Pin(sda_pin))
         self.i2c_addr = i2c_address
         self.set_delta(delta_temp, delta_hum)
         time.sleep_ms(50)
 
-    def init(self, scl_pin=5, sda_pin=4):
+    def init(self, scl_pin=7, sda_pin=6):
         """
         Init the I2C bus using the new pin values
         """
