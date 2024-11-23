@@ -18,6 +18,14 @@ class SHT30:
     * https://www.wemos.cc/sites/default/files/2016-11/SHT30-DIS_datasheet.pdf
     * https://github.com/wemos/WEMOS_SHT3x_Arduino_Library
     * https://www.sensirion.com/fileadmin/user_upload/customers/sensirion/Dokumente/11_Sample_Codes_Software/Humidity_Sensors/Sensirion_Humidity_Sensors_SHT3x_Sample_Code_V2.pdf
+
+    Project: SHT30 Sensor Reading
+    Originally developed for: D1 Mini
+    Adapted for: XIAO ESP32-C3 board
+    Adaptation by: profe Tolocka
+    Date of adaptation: 11-23-2024
+    License: Apache-2.0 (see LICENSE file)
+    Based on the original work by: Roberto Sánchez
     """
     POLYNOMIAL = 0x131  # P(x) = x^8 + x^5 + x^4 + 1 = 100110001
 
